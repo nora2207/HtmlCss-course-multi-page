@@ -1,0 +1,639 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* layout 共通佈局 */
+.wrap{
+    margin: 0 auto;
+    width: 1024px;
+    font-family: Arial, 微軟正黑體;
+}
+.header{
+    height: 76px;
+    background-color: rgba(86, 83, 83, 0.61);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: absolute;
+    z-index: 5;
+    width: 944px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.menu li a{
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 27px 15px;
+    border-bottom: 6px solid transparent;
+}
+.menu li a:hover{
+    color: #07b88c;
+    border-bottom: 6px solid #00cc99;
+}
+.footer{
+    background: #323228;
+    height: 133px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.logo p{
+    color: #9b9b9b;
+    text-align: right;
+    padding-right: 5px;
+}
+.link img{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+/* 首頁 index CSS */
+.banner-index{
+    background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/bg_index.png);
+    height: 560px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 4;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner-index span{
+    color: #ffffff;
+}
+.banner-index h1{
+    font-size: 50px;
+    color: #00cc99;
+    line-height: 1.5;
+}
+.banner-index a{
+    margin-top: 50px;
+    background: #00cc99;
+    width: 180px;
+    color: #ffffff;
+    padding: 20px;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    word-spacing: 15px;
+    border-radius: 5px;
+}
+.banner-index a:hover{
+    position:relative;
+    right: 1px;
+    bottom: 1px;
+}
+.title-index{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.title-index h2{
+    font-size: 36px;
+    color: #00cc99;
+    font-weight: bold;
+}
+.title-index span{
+    color: #9b9b9b;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title-index a{
+    text-decoration: none;
+    border: 2px solid #00cc99;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #00cc99;
+    font-weight: bold;
+}
+.title-index a:hover{
+    color: #ffffff;
+    background: #00cc99;
+}
+.content-index{
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.item-index{
+    width: 260px;
+    box-shadow: 0px 1px 2px gray;
+    text-align: center;
+    padding: 20px;
+}
+.item-index h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #7a7a7a;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.item-index p{
+    line-height: 1.5;
+    color: #9b9b9b;
+}
+.sheet-index{
+    margin-bottom: 60px;
+}
+.sheet-index table{
+    margin: 0 auto;
+    font-weight: bold;
+    color: #323223;
+}
+.sheet-index th, td{
+    text-align: center;
+    padding: 17px;
+}
+.sheet-index th{
+    background: #ebebeb;
+}
+.sheet-index td{
+    border-bottom: 1px solid #ebebeb;
+}
+.sheet-index span{
+    color: #00cc99;
+}
+.sheet-index .space1{
+    padding-left: 145px;
+}
+.sheet-index .space2{
+    padding-left: 145px;
+    padding-right: 145px;
+}
+.form-index{
+    background: #ebebeb;
+    padding-top: 150px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+}
+.word1 p{
+    font-size: 30px;
+    color: #323223;
+    font-weight: bold;
+    line-height: 1.9;
+    width: 370px;
+}
+.word2{
+    text-align: right;
+}
+.text-index{
+    width: 460px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 4px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    outline: none;
+}
+.botton-index{
+    width: 140px;
+    background: #00cc99;
+    border: 0;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    word-spacing: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* 課程 course CSS */
+.banner-course{
+    position:relative;
+}
+.banner-course-word{
+    background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/bg_course.png);
+    height: 560px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 4;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner-course-word h1{
+    font-size: 50px;
+    color: #ffffff;
+}
+.banner-course-word p{
+    font-size: 26px;
+    color: #00cc99;
+    margin-top: 20px;
+    margin-bottom: 58px;
+}
+.banner-course-word a{
+    background: #00cc99;
+    width: 160px;
+    color: #ffffff;
+    padding: 20px 35px;;
+    font-size: 19px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    word-spacing: 15px;
+    border-radius: 5px;
+}
+.banner-course-word a:hover{
+    position:relative;
+    right: 1px;
+    bottom: 1px;
+}
+.banner-course-img1{
+    background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/html.png);
+    position: absolute;
+    z-index: 6;
+    width: 108px;
+    height: 147px;
+    top: 105px;
+    right: 180px;
+}
+.banner-course-img2{
+    background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/CSS.png);
+    position: absolute;
+    z-index: 6;
+    width: 108px;
+    height: 147px;
+    top: 105px;
+    right: 50px;
+}
+.teacher{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px 200px;
+    font-weight: bold;
+}
+.teacher h2{
+    font-size: 34px;
+    color: #00cc99;
+    line-height: 1.5;
+}
+.teacher span{
+    color: #323228;
+}
+.teacher ul{
+    margin-top: 30px;
+}
+.teacher li{
+    color: #9b9b9b;
+    line-height: 1.5;
+    list-style: disc;
+}
+.good{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.good h2{
+    font-size: 36px;
+    color: #00cc99;
+    font-weight: bold;
+    margin-bottom: 30px;
+    word-spacing: 8px;
+}
+.good span{
+    color: #9b9b9b;
+    font-size: 20px;
+    font-weight: bold;
+}
+.good li{
+    color: #323228;
+    list-style: decimal;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.class-course{
+    margin: 60px 200px;
+}
+.class-course h2{
+    font-size: 36px;
+    color: #00cc99;
+    font-weight: bold;
+    word-spacing: 8px;
+    margin-bottom: 30px;
+}
+.class-course span{
+    color: #9b9b9b;
+    font-size: 20px;
+    font-weight: bold;
+}
+.class-course h3{
+    background: #ebebeb;
+    width: 620px;
+    height: 50px;
+    padding-left: 30px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #57574b;
+}
+.class-course p{
+    width: 620px;
+    height: 50px;
+    padding-left: 30px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #afafaf;
+}
+.register-course{
+    background: #ebebeb;
+    padding: 150px 155px 150px 170px;
+    display: flex;
+    justify-content: space-around;
+}
+.register-course-l p{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.9;
+}
+.register-course-r a{
+    background: #00cc99;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    word-spacing: 15px;
+    border-radius: 5px;
+    padding: 14px 40px;
+    display: block;
+    margin-top: 55px;
+    font-size: 20px;
+}
+.register-course-r a:hover{
+    position:relative;
+    right: 1px;
+    bottom: 1px;
+}
+
+
+/* 問答 faq CSS */
+.banner-faq{
+    background-image: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/mutiplePage/bg_QA.png);
+    height: 560px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.banner-faq h1{
+    font-size: 48px;
+    color: #ffffff;
+    padding-top: 180px;
+}
+.banner-faq>p{
+    font-size: 23px;
+    color: #00cc99;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.searchterm{
+    width: 620px;
+    height: 50px;
+    outline: none;
+    font-size: 30px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+}
+.searchbutton{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    position: relative;
+    top: -40px;
+    left: 580px;
+}
+.question-normal{
+    padding: 60px 140px 0px 120px;
+    font-size: 31px;
+    color: #00cc99;
+    font-weight: bold;
+}
+.question-normal span{
+    font-size: 18px;
+    color: #9b9b9b;
+    margin-left: 10px;
+}
+.question-normalQA{
+    padding-left: 120px;
+    padding-right: 136px;
+}
+.question-normalQA h3{
+    font-size: 21px;
+    color: #323223;
+    margin-top: 33px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.question-normalQA p{
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.question-normalQA a{
+    color: #00cc99;
+    text-decoration: none;
+}
+.question-pay{
+    padding: 60px 140px 0px 120px;
+    font-size: 31px;
+    color: #00cc99;
+    font-weight: bold;
+}
+.question-pay span{
+    font-size: 18px;
+    color: #9b9b9b;
+    margin-left: 10px;
+}
+.question-payQA{
+    padding-left: 120px;
+    padding-right: 136px;
+}
+.question-payQA h3{
+    font-size: 21px;
+    color: #323223;
+    margin-top: 33px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.question-payQA p{
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.question-payQA li{
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-weight: bold;
+    list-style: decimal;
+    margin-left: 50px;
+}
+.question-payQA a{
+    color: #00cc99;
+    text-decoration: none;
+}
+.question-refund{
+    padding: 60px 140px 0px 120px;
+    font-size: 31px;
+    color: #00cc99;
+    font-weight: bold;
+}
+.question-refund span{
+    font-size: 18px;
+    color: #9b9b9b;
+    margin-left: 10px;
+}
+.question-refundQA{
+    padding-left: 120px;
+    padding-right: 136px;
+    margin-bottom: 60px;
+}
+.question-refundQA h3{
+    font-size: 21px;
+    color: #323223;
+    margin-top: 33px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.question-refundQA p{
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.question-refundQA h4{
+    color: #323223;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 33px;
+}
+.question-refundQA li{
+    color: #9b9b9b;
+    line-height: 1.5;
+    font-weight: bold;
+    list-style: disc;
+    margin-left: 50px;
+}
+.question-refundQA a{
+    color: #00cc99;
+    text-decoration: none;
+}
+.form-faq{
+    background: #ebebeb;
+    padding-top: 135px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+}
+.form-faq-l p{
+    font-size: 30px;
+    color: #323223;
+    font-weight: bold;
+    line-height: 1.9;
+    width: 430px;
+}
+.form-faq-r{
+    text-align: right;
+}
+.text-faq{
+    width: 460px;
+    font-size: 20px;
+    border: 0;
+    border-radius: 4px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    outline: none;
+}
+.botton-faq{
+    width: 140px;
+    background: #00cc99;
+    border: 0;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    word-spacing: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
